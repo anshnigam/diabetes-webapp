@@ -1,0 +1,37 @@
+body{
+	font-family: "Montserrat";
+	background-color: #F8F4EA;
+	color: #181823;
+}
+.navbar{
+	background-color: #F8CBA6;
+	color: #181823;
+	
+}
+.headings{
+	color: #181823;
+	font-weight: bolder;
+}
+.main-head{
+	background-color: #FFE7CC;
+}
+.small-heading{
+	font-size: 23.5px;
+	font-weight:normal
+}
+.pred-form{
+    display:block;
+    width:50%;
+    margin:0 auto;
+}
+select{
+	width: 100%;
+	background-color:#FFFBEB;
+	border-radius: 5px;
+}
+input{
+	width: 100%;
+	background-color:#FFFBEB ;
+	border-radius: 5px;
+	
+}

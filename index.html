@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Predi99</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300italic,regular,italic,500,500italic,700,700italic"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+    rel="stylesheet" />
+
+  <!-- CSS stylesheets -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- Bootstraps Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="" style="color: #181823">Predi99</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="" style="color: #181823">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" style="color: #181823">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+<div class="main-head">
+  <h1 class="headings big-heading">Welcome to PREDI99</h1>
+  <h4 class="headings small-heading">A ML based diabetes prediction portal</h4>
+</div><br>
+<form action="/result" method="post">
+    <fieldset>
+
+    <div class="pred-form form-group mb-3">
+
+      <div class="row">
+        <div class="col">
+          <label class="form-label" for="highBp">Whether you have high BP?</label>
+        </div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="highChol">Whether you have high Cholestrol?</label></div>
+        <div class="col">
+          <select id="highChol" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="CholCheck">Whether you had cholesterol-test in last 5
+            years?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="BMI">What is your BMI?</label></div>
+        <div class="col"><input type="text" name="input4" id="input4" /></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Smoker">Have you smoked at least 100 cigarettes in your entire
+            life?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Stroke">Whether you had a stroke?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="HeartDiseaseorAttack">DO you have coronary heart disease (CHD)
+            or
+            myocardial
+            infarction(MI)?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="PhysActivity">Did you perform any physical activity in past 30
+            days - not
+            includingjob?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Fruits">Do you consume fruits everyday?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Veggies">Do you consume vegetables everyday?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="HvyAlcoholConsump">Is your alcohol consumption quantity >=14
+            drinks per week for
+            adult men and >=7
+            drinks per week adult women?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="AnyHealthcare">Whether you have any kind of health care
+            coverage,
+            including
+            healthinsurance, prepaid
+            plans such as HMO, etc?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="NoDocbcCost">Was there a time in the past 12 months when you
+            needed to see a doctor
+            but could not
+            because of cost?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="GenHlth">Would you say that in general your health is: scale
+            1-5?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">Excellent</option>
+            <option value="2">Very Good</option>
+            <option value="3">Good</option>
+            <option value="4">Fair</option>
+            <option value="5">Poor</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="MentHlth">Count of days of poor mental health?</label></div>
+        <div class="col"><input type="number" name="MentHlth" id="input15" max="30" min="0" /></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="PhysHlth">Count of days for physical illness or injury in past
+            30 days?</label></div>
+        <div class="col"><input type="number" name="PhysHlth" id="input15" max="30" min="0" /></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="DiffWalk">Do you have serious difficulty walking or climbing
+            stairs?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">YES</option>
+            <option value="0">NO</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Sex">What is your Sex?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">MALE</option>
+            <option value="0">FEMALE</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Age">What is your age?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">Age 18 - 24</option>
+            <option value="2">Age 25 to 29</option>
+            <option value="3">Age 30 to 34</option>
+            <option value="4">Age 35 to 39</option>
+            <option value="5">Age 40 to 44</option>
+            <option value="6">Age 45 to 49</option>
+            <option value="7">Age 50 to 54</option>
+            <option value="8">Age 55 to 59</option>
+            <option value="9">Age 60 to 64</option>
+            <option value="10">Age 65 to 69</option>
+            <option value="11">Age 70 to 74</option>
+            <option value="12">Age 75 to 79</option>
+            <option value="13">Age 80 or older</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Education">What is your Education level?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">Never attended school or only kindergarten</option>
+            <option value="2">Grades 1 - 8 (Elementary)</option>
+            <option value="3">Grades 9 - 11 (Some high school)</option>
+            <option value="4">Grade 12 or GED (High school graduate)</option>
+            <option value="5">College 1 year to 3 years (Some college or technical school)</option>
+            <option value="6">College 4 years or more (College graduate)</option>
+          </select></div>
+      </div>
+
+      <div class="row">
+        <div class="col"><label class="form-label" for="Income">What is your Income scale?</label></div>
+        <div class="col"><select id="highBP" name="BP" size="1">
+            <option value="NIL">-</option>
+            <option value="1">Less than Rs 8,25,000</option>
+            <option value="2">Less than Rs 12,40,000</option>
+            <option value="3">Less than Rs 16,50,000</option>
+            <option value="4">Less than Rs 20,64,000</option>
+            <option value="5">Less than Rs 28,90,000</option>
+            <option value="6">Less than Rs 41,27,000</option>
+            <option value="7">Less than Rs 62,00,000</option>
+            <option value="8">Rs 62,00,000 or more</option>
+          </select></div>
+      </div>
+
+    </div>
+  </fieldset>
+  </form>
+
+  <footer id="footer" class="white-section">
+    <div>
+    </div>
+    <p>© Copyright 2023 PREDI99</p>
+  </footer>
+</body>
+
+</html>
+
+
+
+<div class="row">
+  <div class="col"></div>
+  <div class="col"></div>
+</div>
