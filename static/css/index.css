@@ -35,3 +35,7 @@ input{
 	border-radius: 5px;
 	
 }
+button{
+	width:100px; 
+	height: 25px;
+}
