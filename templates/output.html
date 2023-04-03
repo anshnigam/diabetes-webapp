@@ -31,29 +31,77 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <a class="navbar-brand" href="" style="color: #181823">Predi99</a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                <a class="nav-link" href="" style="color: #181823">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="" style="color: #181823">About Us</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="main-head">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="" style="color: #181823">Predi99</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="" style="color: #181823">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" style="color: #181823">About Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-head">
     <h1 class="headings big-heading">Welcome to PREDI99</h1>
     <h4 class="headings small-heading">A ML based diabetes prediction portal</h4>
-    </div><br>
+  </div><br>
 
-    <strong>{{ prediction_text }}</strong>
+  <strong>{{ prediction_text }}</strong>
 
-    <footer id="footer" class="white-section">
-        <p>© Copyright 2023 PREDI99</p>
-    </footer>
+  </form>
+  <form onsubmit="return searchWrd()" class="pred-form">
+    <label for="others">If you have any other symptoms please specify</label>
+    <div style="display: flex;">
+      <input type="text" name="others" id="word" placeholder="search">
+      <button type="submit" style="height: 30px;"><img src="/static/imgs/search.png"
+          style="height: 20px; width: 20px;"></button>
+    </div>
+  </form>
+
+  <script>
+    
+    function searchWrd() {
+      var searchText = document.getElementById("word").value;
+      let searchWord = searchText.split(" ");
+  
+      const prev = ["BP", "bp", "blood-pressure", "cholestrol", "high-weight", "stroke", "hypertension", "heart-disease", "myocardial-infarction", "alcohol", "alcoholic", "health-care", "insurance", "poor-mental-health", " vegetables", " veggies", " fruits", "apple", " mango", " spinach", " tomato", " potaot"];
+      const related = ["Type I", "Type II", "polygenic-disease", "diabetes-mellitus", "insulin", "poylgenic-disorder", "heart-failure", "ketoacidosis"];
+      let flg = false;
+      first:
+      for (let i = 0; i < searchWord.length; i++) {
+        for (let j = 0; j < prev.length; j++) {
+          if (searchWord[i] == prev[j]) {
+            alert("This Query has been answered previously.")
+            flg  = true;
+            break first;
+          }
+        }
+      }
+      if(!flg){
+        var flg1 = false;
+        snd:
+        for (let i = 0; i < searchWord.length; i++) {
+          for (let j = 0; j < related.length; j++) {
+            if (searchWord[j] == related[i]) {
+              alert("We suggest you to kindly consult a Doctor.")
+              flg1 = true;
+              break snd;
+            }
+          }
+        }
+        if(!flg1)
+        alert("The query is irrelevant.")
+      }
+      return false;
+    }
+  </script>
+
+  <footer id="footer" class="white-section">
+    <p>© Copyright 2023 PREDI99</p>
+  </footer>
 </body>
 
 </html>
