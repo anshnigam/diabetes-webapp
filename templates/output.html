@@ -67,14 +67,14 @@
       var searchText = document.getElementById("word").value;
       let searchWord = searchText.split(" ");
   
-      const prev = ["BP", "bp", "blood-pressure", "cholestrol", "high-weight", "stroke", "hypertension", "heart-disease", "myocardial-infarction", "alcohol", "alcoholic", "health-care", "insurance", "poor-mental-health", " vegetables", " veggies", " fruits", "apple", " mango", " spinach", " tomato", " potaot"];
+      const prev = ["BP", "bp", "blood-pressure", "cholesterol", "high-weight", "stroke", "hypertension", "heart-disease", "myocardial-infarction", "alcohol", "alcoholic", "health-care", "insurance", "poor-mental-health", " vegetables", " veggies", " fruits", "apple", " mango", " spinach", " tomato", " potaot"];
       const related = ["Type I", "Type II", "polygenic-disease", "diabetes-mellitus", "insulin", "poylgenic-disorder", "heart-failure", "ketoacidosis"];
       let flg = false;
       first:
       for (let i = 0; i < searchWord.length; i++) {
         for (let j = 0; j < prev.length; j++) {
           if (searchWord[i] == prev[j]) {
-            alert("This Query has been answered previously.")
+            alert("This query has been taken in account already.")
             flg  = true;
             break first;
           }
@@ -85,15 +85,15 @@
         snd:
         for (let i = 0; i < searchWord.length; i++) {
           for (let j = 0; j < related.length; j++) {
-            if (searchWord[j] == related[i]) {
-              alert("We suggest you to kindly consult a Doctor.")
+            if (searchWord[i] == related[j]) {
+              alert("The symptom has known correlation with Diabetes.We suggest you to kindly consult a Doctor.")
               flg1 = true;
               break snd;
             }
           }
         }
         if(!flg1)
-        alert("The query is irrelevant.")
+        alert("The symptom is not correlated with Diabetes.")
       }
       return false;
     }
